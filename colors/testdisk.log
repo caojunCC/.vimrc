@@ -1,0 +1,1638 @@
+
+
+Sun Mar 31 14:11:28 2013
+Command line: TestDisk
+
+TestDisk 6.13, Data Recovery Utility, November 2011
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 3.2.0-39-generic (#62-Ubuntu SMP Thu Feb 28 00:28:53 UTC 2013) x86_64
+Compiler: GCC 4.6
+Compilation date: 2012-02-05T07:15:52
+ext2fs lib: 1.42, ntfs lib: 10:0:0, reiserfs lib: none, ewf lib: none
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       1465149168 sectors
+/dev/sda: user_max   1465149168 sectors
+/dev/sda: native_max 1465149168 sectors
+/dev/sda: dco        1465149168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - CHS 1 1 1, sector size=512
+Hard disk list
+Disk /dev/sda - 750 GB / 698 GiB - CHS 91201 255 63, sector size=512 - TOSHIBA MK7575GSX, S/N:42CKC332T, FW:GT002D
+Disk /dev/sdc - 500 GB / 465 GiB - CHS 60801 255 63, sector size=512 - Generic External, FW:1.13
+
+Partition table type (auto): Intel
+Disk /dev/sdc - 500 GB / 465 GiB - Generic External
+Partition table type: Intel
+
+Analyse Disk /dev/sdc - 500 GB / 465 GiB - CHS 60801 255 63
+Geometry from i386 MBR: head=255 sector=63
+FAT32 at 0/1/1
+Info: size boot_sector 976768002, partition 976768002
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+Current partition structure:
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+Ask the user for vista mode
+Computes LBA from CHS for Disk /dev/sdc - 500 GB / 465 GiB - CHS 60802 255 63
+Allow partial last cylinder : Yes
+search_vista_part: 1
+
+search_part()
+Disk /dev/sdc - 500 GB / 465 GiB - CHS 60802 255 63
+FAT32 at 0/1/1
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+
+FAT32 at 0/1/1
+     FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+
+Results
+   * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+
+interface_write()
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+
+search_part()
+Disk /dev/sdc - 500 GB / 465 GiB - CHS 60802 255 63
+FAT32 at 0/1/1
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+
+FAT32 at 0/1/1
+     FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+FAT32 at 0/1/7
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+
+FAT32 at 0/1/7
+     FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT found using backup sector!, 500 GB / 465 GiB
+Search for partition aborted
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+
+Results
+   * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+
+interface_write()
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+simulate write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+No extended partition
+
+Interface Advanced
+Geometry from i386 MBR: head=255 sector=63
+FAT32 at 0/1/1
+Info: size boot_sector 976768002, partition 976768002
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+
+FAT: cluster=2(0x2), pos=476831
+Directory /
+Change partition type:
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+Change partition type:
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+
+fat32_boot_sector
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+FAT32 at 0/1/1
+Info: size boot_sector 976768002, partition 976768002
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+FAT32 at 0/1/1
+Info: size boot_sector 976768002, partition 976768002
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+Boot sector
+OK
+
+Backup boot sector
+OK
+
+Second sectors (cluster information) are not identical.
+
+A valid FAT Boot sector must be present in order to access
+any data; even if the partition is not bootable.
+
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+rebuild_FAT_BS p_fat12 0, p_fat16 0, p_fat32 1
+fat_find_type(max_offset=7631064, p_fat12=0, p_fat16=0, p_fat32=1, debug=1, dump_ind=0)
+FAT32 at 32(0/1/33), nbr=1
+FAT32 at 238400(14/215/9), nbr=1
+FAT32 at 490711(30/140/5), nbr=1
+FAT32 at 490511(30/136/57), nbr=2
+FAT32 at 490725(30/140/19), nbr=1
+FAT32 at 490726(30/140/20), nbr=1
+FAT32 at 490727(30/140/21), nbr=1
+FAT32 at 490728(30/140/22), nbr=1
+FAT32 at 490729(30/140/23), nbr=1
+FAT32 at 490730(30/140/24), nbr=1
+FAT32 at 490731(30/140/25), nbr=1
+FAT32 at 490732(30/140/26), nbr=1
+FAT32 at 490733(30/140/27), nbr=1
+FAT32 at 490734(30/140/28), nbr=1
+FAT32 at 490735(30/140/29), nbr=1
+FAT32 at 490736(30/140/30), nbr=1
+FAT32 at 490737(30/140/31), nbr=1
+FAT32 at 490738(30/140/32), nbr=1
+FAT32 at 490739(30/140/33), nbr=1
+FAT32 at 490740(30/140/34), nbr=1
+FAT32 at 490741(30/140/35), nbr=1
+FAT32 at 490742(30/140/36), nbr=1
+FAT32 at 490743(30/140/37), nbr=1
+FAT32 at 490744(30/140/38), nbr=1
+FAT32 at 490745(30/140/39), nbr=1
+FAT32 at 490746(30/140/40), nbr=1
+FAT32 at 490748(30/140/42), nbr=1
+FAT32 at 490749(30/140/43), nbr=1
+FAT32 at 490751(30/140/45), nbr=1
+FAT32 at 490752(30/140/46), nbr=1
+FAT32 at 490753(30/140/47), nbr=1
+FAT32 at 490754(30/140/48), nbr=1
+FAT32 at 490755(30/140/49), nbr=1
+FAT32 at 490757(30/140/51), nbr=1
+FAT32 at 490758(30/140/52), nbr=1
+FAT32 at 490760(30/140/54), nbr=1
+FAT32 at 490763(30/140/57), nbr=1
+FAT32 at 490764(30/140/58), nbr=1
+FAT32 at 490766(30/140/60), nbr=1
+FAT32 at 490767(30/140/61), nbr=1
+FAT32 at 490768(30/140/62), nbr=1
+FAT32 at 490769(30/140/63), nbr=1
+FAT32 at 38900(2/108/30), nbr=1
+FAT32 at 490771(30/141/2), nbr=1
+FAT32 at 490772(30/141/3), nbr=1
+FAT32 at 490773(30/141/4), nbr=1
+FAT32 at 490774(30/141/5), nbr=1
+FAT32 at 490775(30/141/6), nbr=1
+FAT32 at 490776(30/141/7), nbr=1
+FAT32 at 490777(30/141/8), nbr=1
+FAT32 at 490778(30/141/9), nbr=1
+FAT32 at 490779(30/141/10), nbr=1
+FAT32 at 490780(30/141/11), nbr=1
+FAT32 at 490781(30/141/12), nbr=1
+FAT32 at 490782(30/141/13), nbr=1
+FAT32 at 490783(30/141/14), nbr=1
+FAT32 at 490784(30/141/15), nbr=1
+FAT32 at 490785(30/141/16), nbr=1
+FAT32 at 490786(30/141/17), nbr=1
+FAT32 at 490787(30/141/18), nbr=1
+FAT32 at 490788(30/141/19), nbr=1
+FAT32 at 490789(30/141/20), nbr=1
+FAT32 at 490790(30/141/21), nbr=1
+FAT32 at 490791(30/141/22), nbr=1
+FAT32 at 490792(30/141/23), nbr=1
+FAT32 at 490793(30/141/24), nbr=1
+FAT32 at 490794(30/141/25), nbr=1
+FAT32 at 490795(30/141/26), nbr=1
+FAT32 at 490796(30/141/27), nbr=1
+FAT32 at 490798(30/141/29), nbr=1
+FAT32 at 490799(30/141/30), nbr=1
+FAT32 at 490801(30/141/32), nbr=1
+FAT32 at 490802(30/141/33), nbr=1
+FAT32 at 490804(30/141/35), nbr=1
+FAT32 at 490805(30/141/36), nbr=1
+FAT32 at 490807(30/141/38), nbr=1
+FAT32 at 490808(30/141/39), nbr=1
+FAT32 at 490810(30/141/41), nbr=1
+FAT32 at 490811(30/141/42), nbr=1
+FAT32 at 490812(30/141/43), nbr=1
+FAT32 at 490813(30/141/44), nbr=1
+FAT32 at 490814(30/141/45), nbr=1
+FAT32 at 490815(30/141/46), nbr=1
+FAT32 at 490816(30/141/47), nbr=1
+FAT32 at 490817(30/141/48), nbr=1
+FAT32 at 490818(30/141/49), nbr=1
+FAT32 at 490819(30/141/50), nbr=1
+FAT32 at 490820(30/141/51), nbr=1
+FAT32 at 490821(30/141/52), nbr=1
+FAT32 at 490822(30/141/53), nbr=1
+FAT32 at 490823(30/141/54), nbr=1
+FAT32 at 490824(30/141/55), nbr=1
+FAT32 at 490825(30/141/56), nbr=1
+FAT32 at 490826(30/141/57), nbr=1
+FAT32 at 490827(30/141/58), nbr=1
+FAT32 at 490828(30/141/59), nbr=1
+FAT32 at 490829(30/141/60), nbr=1
+FAT32 at 490830(30/141/61), nbr=1
+FAT32 at 490831(30/141/62), nbr=1
+FAT32 at 490832(30/141/63), nbr=1
+FAT32 at 490833(30/142/1), nbr=1
+FAT32 at 490834(30/142/2), nbr=1
+FAT32 at 490835(30/142/3), nbr=1
+FAT32 at 490836(30/142/4), nbr=1
+FAT32 at 490837(30/142/5), nbr=1
+FAT32 at 490839(30/142/7), nbr=1
+FAT32 at 490840(30/142/8), nbr=1
+FAT32 at 490842(30/142/10), nbr=1
+FAT32 at 490843(30/142/11), nbr=1
+FAT32 at 490845(30/142/13), nbr=1
+FAT32 at 490846(30/142/14), nbr=1
+FAT32 at 490848(30/142/16), nbr=1
+FAT32 at 490849(30/142/17), nbr=1
+FAT32 at 490851(30/142/19), nbr=1
+FAT32 at 490852(30/142/20), nbr=1
+FAT32 at 490853(30/142/21), nbr=1
+FAT32 at 490854(30/142/22), nbr=1
+FAT32 at 490855(30/142/23), nbr=1
+FAT32 at 490856(30/142/24), nbr=1
+FAT32 at 490857(30/142/25), nbr=1
+FAT32 at 490859(30/142/27), nbr=1
+FAT32 at 490860(30/142/28), nbr=1
+FAT32 at 490862(30/142/30), nbr=1
+FAT32 at 490863(30/142/31), nbr=1
+FAT32 at 490864(30/142/32), nbr=1
+FAT32 at 490865(30/142/33), nbr=1
+FAT32 at 490866(30/142/34), nbr=1
+FAT32 at 490867(30/142/35), nbr=1
+FAT32 at 490868(30/142/36), nbr=1
+FAT32 at 490869(30/142/37), nbr=1
+FAT32 at 490871(30/142/39), nbr=1
+FAT32 at 490872(30/142/40), nbr=1
+FAT32 at 490873(30/142/41), nbr=1
+FAT32 at 490874(30/142/42), nbr=1
+FAT32 at 490875(30/142/43), nbr=1
+FAT32 at 403451(25/29/63), nbr=1
+FAT32 at 490877(30/142/45), nbr=1
+FAT32 at 490878(30/142/46), nbr=1
+FAT32 at 490880(30/142/48), nbr=1
+FAT32 at 490881(30/142/49), nbr=1
+FAT32 at 490883(30/142/51), nbr=1
+FAT32 at 490884(30/142/52), nbr=1
+FAT32 at 490886(30/142/54), nbr=1
+FAT32 at 490887(30/142/55), nbr=1
+FAT32 at 490889(30/142/57), nbr=1
+FAT32 at 490890(30/142/58), nbr=1
+FAT32 at 490892(30/142/60), nbr=1
+FAT32 at 490893(30/142/61), nbr=1
+FAT32 at 490894(30/142/62), nbr=1
+FAT32 at 490895(30/142/63), nbr=1
+FAT32 at 490896(30/143/1), nbr=1
+FAT32 at 490897(30/143/2), nbr=1
+FAT32 at 490898(30/143/3), nbr=1
+FAT32 at 490899(30/143/4), nbr=1
+FAT32 at 490900(30/143/5), nbr=1
+FAT32 at 490901(30/143/6), nbr=1
+FAT32 at 490902(30/143/7), nbr=1
+FAT32 at 490903(30/143/8), nbr=1
+FAT32 at 490904(30/143/9), nbr=1
+FAT32 at 490905(30/143/10), nbr=1
+FAT32 at 490906(30/143/11), nbr=1
+FAT32 at 490907(30/143/12), nbr=1
+FAT32 at 490908(30/143/13), nbr=1
+FAT32 at 490916(30/143/21), nbr=1
+FAT32 at 490715(30/140/9), nbr=7
+FAT32 at 490937(30/143/42), nbr=1
+FAT32 at 490939(30/143/44), nbr=1
+FAT32 at 490940(30/143/45), nbr=1
+FAT32 at 490942(30/143/47), nbr=1
+FAT32 at 490943(30/143/48), nbr=1
+FAT32 at 490945(30/143/50), nbr=1
+FAT32 at 490946(30/143/51), nbr=1
+FAT32 at 490948(30/143/53), nbr=1
+FAT32 at 490949(30/143/54), nbr=1
+FAT32 at 490951(30/143/56), nbr=1
+FAT32 at 490952(30/143/57), nbr=1
+FAT32 at 490954(30/143/59), nbr=1
+FAT32 at 490957(30/143/62), nbr=1
+FAT32 at 272104(16/240/8), nbr=1
+FAT32 at 490960(30/144/2), nbr=1
+FAT32 at 490961(30/144/3), nbr=1
+FAT32 at 490963(30/144/5), nbr=1
+FAT32 at 490964(30/144/6), nbr=1
+FAT32 at 490966(30/144/8), nbr=1
+FAT32 at 490967(30/144/9), nbr=1
+FAT32 at 490969(30/144/11), nbr=1
+FAT32 at 490972(30/144/14), nbr=1
+FAT32 at 490973(30/144/15), nbr=1
+FAT32 at 490975(30/144/17), nbr=1
+FAT32 at 31943(1/253/3), nbr=1
+FAT32 at 490978(30/144/20), nbr=1
+FAT32 at 490979(30/144/21), nbr=1
+FAT32 at 490981(30/144/23), nbr=1
+FAT32 at 490984(30/144/26), nbr=1
+FAT32 at 490986(30/144/28), nbr=1
+FAT32 at 490987(30/144/29), nbr=1
+FAT32 at 490989(30/144/31), nbr=1
+FAT32 at 490990(30/144/32), nbr=1
+FAT32 at 490992(30/144/34), nbr=1
+FAT32 at 490993(30/144/35), nbr=1
+FAT32 at 490995(30/144/37), nbr=1
+FAT32 at 490996(30/144/38), nbr=1
+FAT32 at 490998(30/144/40), nbr=1
+FAT32 at 490999(30/144/41), nbr=1
+FAT32 at 491001(30/144/43), nbr=1
+FAT32 at 491002(30/144/44), nbr=1
+FAT32 at 491004(30/144/46), nbr=1
+FAT32 at 491005(30/144/47), nbr=1
+FAT32 at 491007(30/144/49), nbr=1
+FAT32 at 491008(30/144/50), nbr=1
+FAT32 at 491010(30/144/52), nbr=1
+FAT32 at 491011(30/144/53), nbr=1
+FAT32 at 491013(30/144/55), nbr=1
+FAT32 at 491014(30/144/56), nbr=1
+FAT32 at 491016(30/144/58), nbr=1
+FAT32 at 64367(4/2/45), nbr=1
+FAT32 at 491019(30/144/61), nbr=1
+FAT32 at 491020(30/144/62), nbr=1
+FAT32 at 491022(30/145/1), nbr=1
+FAT32 at 491025(30/145/4), nbr=1
+FAT32 at 491028(30/145/7), nbr=1
+FAT32 at 491029(30/145/8), nbr=1
+FAT32 at 491031(30/145/10), nbr=1
+FAT32 at 491033(30/145/12), nbr=1
+FAT32 at 491034(30/145/13), nbr=1
+FAT32 at 491036(30/145/15), nbr=1
+FAT32 at 491039(30/145/18), nbr=1
+FAT32 at 491040(30/145/19), nbr=1
+FAT32 at 491042(30/145/21), nbr=1
+FAT32 at 491043(30/145/22), nbr=1
+FAT32 at 491045(30/145/24), nbr=1
+FAT32 at 491048(30/145/27), nbr=1
+FAT32 at 491051(30/145/30), nbr=1
+FAT32 at 491052(30/145/31), nbr=1
+FAT32 at 491054(30/145/33), nbr=1
+FAT32 at 491057(30/145/36), nbr=1
+FAT32 at 491058(30/145/37), nbr=1
+FAT32 at 491060(30/145/39), nbr=1
+FAT32 at 491061(30/145/40), nbr=1
+FAT32 at 491063(30/145/42), nbr=1
+FAT32 at 491066(30/145/45), nbr=1
+FAT32 at 491069(30/145/48), nbr=1
+FAT32 at 491072(30/145/51), nbr=1
+FAT32 at 491073(30/145/52), nbr=1
+FAT32 at 491075(30/145/54), nbr=1
+FAT32 at 491076(30/145/55), nbr=1
+FAT32 at 491078(30/145/57), nbr=1
+FAT32 at 491079(30/145/58), nbr=1
+FAT32 at 491080(30/145/59), nbr=1
+FAT32 at 491081(30/145/60), nbr=1
+FAT32 at 491083(30/145/62), nbr=1
+FAT32 at 491084(30/145/63), nbr=1
+FAT32 at 491086(30/146/2), nbr=1
+FAT32 at 491087(30/146/3), nbr=1
+FAT32 at 491089(30/146/5), nbr=1
+FAT32 at 491090(30/146/6), nbr=1
+FAT32 at 491092(30/146/8), nbr=1
+FAT32 at 491093(30/146/9), nbr=1
+FAT32 at 491095(30/146/11), nbr=1
+FAT32 at 491096(30/146/12), nbr=1
+FAT32 at 491098(30/146/14), nbr=1
+FAT32 at 491101(30/146/17), nbr=1
+FAT32 at 491104(30/146/20), nbr=1
+FAT32 at 491107(30/146/23), nbr=1
+FAT32 at 491108(30/146/24), nbr=1
+FAT32 at 491110(30/146/26), nbr=1
+FAT32 at 491111(30/146/27), nbr=1
+FAT32 at 491113(30/146/29), nbr=1
+FAT32 at 491114(30/146/30), nbr=1
+FAT32 at 491116(30/146/32), nbr=1
+FAT32 at 491119(30/146/35), nbr=1
+FAT32 at 491122(30/146/38), nbr=1
+FAT32 at 491125(30/146/41), nbr=1
+FAT32 at 491126(30/146/42), nbr=1
+FAT32 at 491127(30/146/43), nbr=1
+FAT32 at 491128(30/146/44), nbr=1
+FAT32 at 491130(30/146/46), nbr=1
+FAT32 at 491131(30/146/47), nbr=1
+FAT32 at 491133(30/146/49), nbr=1
+FAT32 at 491134(30/146/50), nbr=1
+FAT32 at 491136(30/146/52), nbr=1
+FAT32 at 491137(30/146/53), nbr=1
+FAT32 at 491139(30/146/55), nbr=1
+FAT32 at 491140(30/146/56), nbr=1
+FAT32 at 491142(30/146/58), nbr=1
+FAT32 at 491143(30/146/59), nbr=1
+FAT32 at 491145(30/146/61), nbr=1
+FAT32 at 491146(30/146/62), nbr=1
+FAT32 at 491148(30/147/1), nbr=1
+FAT32 at 491149(30/147/2), nbr=1
+FAT32 at 491151(30/147/4), nbr=1
+FAT32 at 491154(30/147/7), nbr=1
+FAT32 at 491155(30/147/8), nbr=1
+FAT32 at 491157(30/147/10), nbr=1
+FAT32 at 491158(30/147/11), nbr=1
+FAT32 at 491160(30/147/13), nbr=1
+FAT32 at 491163(30/147/16), nbr=1
+FAT32 at 491164(30/147/17), nbr=1
+FAT32 at 491166(30/147/19), nbr=1
+FAT32 at 435043(27/21/29), nbr=1
+FAT32 at 491169(30/147/22), nbr=1
+FAT32 at 491170(30/147/23), nbr=1
+FAT32 at 491172(30/147/25), nbr=1
+FAT32 at 491174(30/147/27), nbr=1
+FAT32 at 491175(30/147/28), nbr=1
+FAT32 at 491177(30/147/30), nbr=1
+FAT32 at 491178(30/147/31), nbr=1
+FAT32 at 491180(30/147/33), nbr=1
+FAT32 at 491181(30/147/34), nbr=1
+FAT32 at 491183(30/147/36), nbr=1
+FAT32 at 491184(30/147/37), nbr=1
+FAT32 at 491186(30/147/39), nbr=1
+FAT32 at 491187(30/147/40), nbr=1
+FAT32 at 491189(30/147/42), nbr=1
+FAT32 at 491190(30/147/43), nbr=1
+FAT32 at 491192(30/147/45), nbr=1
+FAT32 at 491193(30/147/46), nbr=1
+FAT32 at 491195(30/147/48), nbr=1
+FAT32 at 491198(30/147/51), nbr=1
+FAT32 at 491199(30/147/52), nbr=1
+FAT32 at 491201(30/147/54), nbr=1
+FAT32 at 491202(30/147/55), nbr=1
+FAT32 at 491204(30/147/57), nbr=1
+FAT32 at 152962(9/133/62), nbr=1
+FAT32 at 491207(30/147/60), nbr=1
+FAT32 at 491210(30/147/63), nbr=1
+FAT32 at 491211(30/148/1), nbr=1
+FAT32 at 491213(30/148/3), nbr=1
+FAT32 at 491214(30/148/4), nbr=1
+FAT32 at 491216(30/148/6), nbr=1
+FAT32 at 491219(30/148/9), nbr=1
+FAT32 at 140111(8/184/63), nbr=1
+FAT32 at 491221(30/148/11), nbr=1
+FAT32 at 491222(30/148/12), nbr=1
+FAT32 at 491224(30/148/14), nbr=1
+FAT32 at 491225(30/148/15), nbr=1
+FAT32 at 491227(30/148/17), nbr=1
+FAT32 at 491228(30/148/18), nbr=1
+FAT32 at 491230(30/148/20), nbr=1
+FAT32 at 491231(30/148/21), nbr=1
+FAT32 at 491233(30/148/23), nbr=1
+FAT32 at 491234(30/148/24), nbr=1
+FAT32 at 491236(30/148/26), nbr=1
+FAT32 at 491237(30/148/27), nbr=1
+FAT32 at 491239(30/148/29), nbr=1
+FAT32 at 491240(30/148/30), nbr=1
+FAT32 at 491242(30/148/32), nbr=1
+FAT32 at 491243(30/148/33), nbr=1
+FAT32 at 491245(30/148/35), nbr=1
+FAT32 at 491246(30/148/36), nbr=1
+FAT32 at 491248(30/148/38), nbr=1
+FAT32 at 491249(30/148/39), nbr=1
+FAT32 at 491251(30/148/41), nbr=1
+FAT32 at 491252(30/148/42), nbr=1
+FAT32 at 491254(30/148/44), nbr=1
+FAT32 at 267174(16/161/55), nbr=1
+FAT32 at 491257(30/148/47), nbr=1
+FAT32 at 491258(30/148/48), nbr=1
+FAT32 at 491260(30/148/50), nbr=1
+FAT32 at 491261(30/148/51), nbr=1
+FAT32 at 491263(30/148/53), nbr=1
+FAT32 at 491264(30/148/54), nbr=1
+FAT32 at 491266(30/148/56), nbr=1
+FAT32 at 491267(30/148/57), nbr=1
+FAT32 at 491268(30/148/58), nbr=1
+FAT32 at 491269(30/148/59), nbr=1
+FAT32 at 491271(30/148/61), nbr=1
+FAT32 at 491272(30/148/62), nbr=1
+FAT32 at 491274(30/149/1), nbr=1
+FAT32 at 491275(30/149/2), nbr=1
+FAT32 at 491277(30/149/4), nbr=1
+FAT32 at 491278(30/149/5), nbr=1
+FAT32 at 491280(30/149/7), nbr=1
+FAT32 at 491281(30/149/8), nbr=1
+FAT32 at 491283(30/149/10), nbr=1
+FAT32 at 491284(30/149/11), nbr=1
+FAT32 at 491286(30/149/13), nbr=1
+FAT32 at 491287(30/149/14), nbr=1
+FAT32 at 491289(30/149/16), nbr=1
+FAT32 at 491290(30/149/17), nbr=1
+FAT32 at 491292(30/149/19), nbr=1
+FAT32 at 491293(30/149/20), nbr=1
+FAT32 at 491295(30/149/22), nbr=1
+FAT32 at 491296(30/149/23), nbr=1
+FAT32 at 491298(30/149/25), nbr=1
+FAT32 at 491299(30/149/26), nbr=1
+FAT32 at 491301(30/149/28), nbr=1
+FAT32 at 491302(30/149/29), nbr=1
+FAT32 at 491304(30/149/31), nbr=1
+FAT32 at 491305(30/149/32), nbr=1
+FAT32 at 491307(30/149/34), nbr=1
+FAT32 at 491308(30/149/35), nbr=1
+FAT32 at 491310(30/149/37), nbr=1
+FAT32 at 35858(2/60/12), nbr=1
+FAT32 at 491313(30/149/40), nbr=1
+FAT32 at 491315(30/149/42), nbr=1
+FAT32 at 491316(30/149/43), nbr=1
+FAT32 at 491318(30/149/45), nbr=1
+FAT32 at 491319(30/149/46), nbr=1
+FAT32 at 491321(30/149/48), nbr=1
+FAT32 at 491322(30/149/49), nbr=1
+FAT32 at 491324(30/149/51), nbr=1
+FAT32 at 491325(30/149/52), nbr=1
+FAT32 at 491327(30/149/54), nbr=1
+FAT32 at 491328(30/149/55), nbr=1
+FAT32 at 491330(30/149/57), nbr=1
+FAT32 at 491331(30/149/58), nbr=1
+FAT32 at 491333(30/149/60), nbr=1
+FAT32 at 491334(30/149/61), nbr=1
+FAT32 at 491336(30/149/63), nbr=1
+FAT32 at 491337(30/150/1), nbr=1
+FAT32 at 491339(30/150/3), nbr=1
+FAT32 at 491340(30/150/4), nbr=1
+FAT32 at 491342(30/150/6), nbr=1
+FAT32 at 491345(30/150/9), nbr=1
+FAT32 at 491346(30/150/10), nbr=1
+FAT32 at 491348(30/150/12), nbr=1
+FAT32 at 491349(30/150/13), nbr=1
+FAT32 at 491351(30/150/15), nbr=1
+FAT32 at 491354(30/150/18), nbr=1
+FAT32 at 491355(30/150/19), nbr=1
+FAT32 at 491357(30/150/21), nbr=1
+FAT32 at 491358(30/150/22), nbr=1
+FAT32 at 491360(30/150/24), nbr=1
+FAT32 at 491361(30/150/25), nbr=1
+FAT32 at 491362(30/150/26), nbr=1
+FAT32 at 491363(30/150/27), nbr=1
+FAT32 at 491365(30/150/29), nbr=1
+FAT32 at 491366(30/150/30), nbr=1
+FAT32 at 491368(30/150/32), nbr=1
+FAT32 at 491369(30/150/33), nbr=1
+FAT32 at 491371(30/150/35), nbr=1
+FAT32 at 491372(30/150/36), nbr=1
+FAT32 at 491374(30/150/38), nbr=1
+FAT32 at 491377(30/150/41), nbr=1
+FAT32 at 491378(30/150/42), nbr=1
+FAT32 at 491380(30/150/44), nbr=1
+FAT32 at 491381(30/150/45), nbr=1
+FAT32 at 491383(30/150/47), nbr=1
+FAT32 at 491384(30/150/48), nbr=1
+FAT32 at 491386(30/150/50), nbr=1
+FAT32 at 491387(30/150/51), nbr=1
+FAT32 at 491389(30/150/53), nbr=1
+FAT32 at 491390(30/150/54), nbr=1
+FAT32 at 491392(30/150/56), nbr=1
+FAT32 at 126514(7/224/11), nbr=1
+FAT32 at 491395(30/150/59), nbr=1
+FAT32 at 491398(30/150/62), nbr=1
+FAT32 at 491401(30/151/2), nbr=1
+FAT32 at 491402(30/151/3), nbr=1
+FAT32 at 491404(30/151/5), nbr=1
+FAT32 at 491407(30/151/8), nbr=1
+FAT32 at 404489(25/46/30), nbr=1
+FAT32 at 491409(30/151/10), nbr=1
+FAT32 at 491410(30/151/11), nbr=1
+FAT32 at 491412(30/151/13), nbr=1
+FAT32 at 491413(30/151/14), nbr=1
+FAT32 at 491415(30/151/16), nbr=1
+FAT32 at 491416(30/151/17), nbr=1
+FAT32 at 491418(30/151/19), nbr=1
+FAT32 at 491419(30/151/20), nbr=1
+FAT32 at 491421(30/151/22), nbr=1
+FAT32 at 491422(30/151/23), nbr=1
+FAT32 at 491424(30/151/25), nbr=1
+FAT32 at 491425(30/151/26), nbr=1
+FAT32 at 491427(30/151/28), nbr=1
+FAT32 at 491428(30/151/29), nbr=1
+FAT32 at 491430(30/151/31), nbr=1
+FAT32 at 491431(30/151/32), nbr=1
+FAT32 at 491433(30/151/34), nbr=1
+FAT32 at 491434(30/151/35), nbr=1
+FAT32 at 491436(30/151/37), nbr=1
+FAT32 at 491437(30/151/38), nbr=1
+FAT32 at 491439(30/151/40), nbr=1
+FAT32 at 491440(30/151/41), nbr=1
+FAT32 at 491442(30/151/43), nbr=1
+FAT32 at 281188(17/129/20), nbr=1
+FAT32 at 491445(30/151/46), nbr=1
+FAT32 at 491448(30/151/49), nbr=1
+FAT32 at 491451(30/151/52), nbr=1
+FAT32 at 491452(30/151/53), nbr=1
+FAT32 at 491454(30/151/55), nbr=1
+FAT32 at 491456(30/151/57), nbr=1
+FAT32 at 491457(30/151/58), nbr=1
+FAT32 at 491459(30/151/60), nbr=1
+FAT32 at 491460(30/151/61), nbr=1
+FAT32 at 491462(30/151/63), nbr=1
+FAT32 at 491463(30/152/1), nbr=1
+FAT32 at 491465(30/152/3), nbr=1
+FAT32 at 491466(30/152/4), nbr=1
+FAT32 at 491468(30/152/6), nbr=1
+FAT32 at 491471(30/152/9), nbr=1
+FAT32 at 491472(30/152/10), nbr=1
+FAT32 at 491474(30/152/12), nbr=1
+FAT32 at 491475(30/152/13), nbr=1
+FAT32 at 491477(30/152/15), nbr=1
+FAT32 at 491478(30/152/16), nbr=1
+FAT32 at 491480(30/152/18), nbr=1
+FAT32 at 491481(30/152/19), nbr=1
+FAT32 at 491483(30/152/21), nbr=1
+FAT32 at 491484(30/152/22), nbr=1
+FAT32 at 491486(30/152/24), nbr=1
+FAT32 at 491487(30/152/25), nbr=1
+FAT32 at 491489(30/152/27), nbr=1
+FAT32 at 491492(30/152/30), nbr=1
+FAT32 at 491493(30/152/31), nbr=1
+FAT32 at 491495(30/152/33), nbr=1
+FAT32 at 491498(30/152/36), nbr=1
+FAT32 at 491499(30/152/37), nbr=1
+FAT32 at 491501(30/152/39), nbr=1
+FAT32 at 491503(30/152/41), nbr=1
+FAT32 at 491504(30/152/42), nbr=1
+FAT32 at 491506(30/152/44), nbr=1
+FAT32 at 491507(30/152/45), nbr=1
+FAT32 at 491509(30/152/47), nbr=1
+FAT32 at 491510(30/152/48), nbr=1
+FAT32 at 491512(30/152/50), nbr=1
+FAT32 at 491513(30/152/51), nbr=1
+FAT32 at 491515(30/152/53), nbr=1
+FAT32 at 160912(10/5/11), nbr=1
+FAT32 at 491518(30/152/56), nbr=1
+FAT32 at 491519(30/152/57), nbr=1
+FAT32 at 491521(30/152/59), nbr=1
+FAT32 at 38580(2/103/25), nbr=1
+FAT32 at 491524(30/152/62), nbr=1
+FAT32 at 491527(30/153/2), nbr=1
+FAT32 at 491528(30/153/3), nbr=1
+FAT32 at 491530(30/153/5), nbr=1
+FAT32 at 491531(30/153/6), nbr=1
+FAT32 at 491533(30/153/8), nbr=1
+FAT32 at 491536(30/153/11), nbr=1
+FAT32 at 491537(30/153/12), nbr=1
+FAT32 at 491539(30/153/14), nbr=1
+FAT32 at 491542(30/153/17), nbr=1
+FAT32 at 491543(30/153/18), nbr=1
+FAT32 at 491545(30/153/20), nbr=1
+FAT32 at 491548(30/153/23), nbr=1
+FAT32 at 491550(30/153/25), nbr=1
+FAT32 at 491551(30/153/26), nbr=1
+FAT32 at 491553(30/153/28), nbr=1
+FAT32 at 491554(30/153/29), nbr=1
+FAT32 at 491556(30/153/31), nbr=1
+FAT32 at 491557(30/153/32), nbr=1
+FAT32 at 491559(30/153/34), nbr=1
+FAT32 at 491560(30/153/35), nbr=1
+FAT32 at 491562(30/153/37), nbr=1
+FAT32 at 491565(30/153/40), nbr=1
+FAT32 at 491566(30/153/41), nbr=1
+FAT32 at 491568(30/153/43), nbr=1
+FAT32 at 491569(30/153/44), nbr=1
+FAT32 at 491571(30/153/46), nbr=1
+FAT32 at 301288(18/193/23), nbr=1
+FAT32 at 491574(30/153/49), nbr=1
+FAT32 at 491575(30/153/50), nbr=1
+FAT32 at 491577(30/153/52), nbr=1
+FAT32 at 491578(30/153/53), nbr=1
+FAT32 at 491580(30/153/55), nbr=1
+FAT32 at 491581(30/153/56), nbr=1
+FAT32 at 491583(30/153/58), nbr=1
+FAT32 at 491586(30/153/61), nbr=1
+FAT32 at 491589(30/154/1), nbr=1
+FAT32 at 491590(30/154/2), nbr=1
+FAT32 at 491592(30/154/4), nbr=1
+FAT32 at 491593(30/154/5), nbr=1
+FAT32 at 491595(30/154/7), nbr=1
+FAT32 at 491596(30/154/8), nbr=1
+FAT32 at 491597(30/154/9), nbr=1
+FAT32 at 491598(30/154/10), nbr=1
+FAT32 at 491600(30/154/12), nbr=1
+FAT32 at 491601(30/154/13), nbr=1
+FAT32 at 491603(30/154/15), nbr=1
+FAT32 at 426738(26/144/40), nbr=1
+FAT32 at 491606(30/154/18), nbr=1
+FAT32 at 491607(30/154/19), nbr=1
+FAT32 at 491609(30/154/21), nbr=1
+FAT32 at 491610(30/154/22), nbr=1
+FAT32 at 491612(30/154/24), nbr=1
+FAT32 at 161011(10/6/47), nbr=1
+FAT32 at 491615(30/154/27), nbr=1
+FAT32 at 491618(30/154/30), nbr=1
+FAT32 at 491621(30/154/33), nbr=1
+FAT32 at 491622(30/154/34), nbr=1
+FAT32 at 491624(30/154/36), nbr=1
+FAT32 at 491625(30/154/37), nbr=1
+FAT32 at 491627(30/154/39), nbr=1
+FAT32 at 491629(30/154/41), nbr=1
+FAT32 at 491630(30/154/42), nbr=1
+FAT32 at 491631(30/154/43), nbr=1
+FAT32 at 491632(30/154/44), nbr=1
+FAT32 at 491633(30/154/45), nbr=1
+FAT32 at 491634(30/154/46), nbr=1
+FAT32 at 491636(30/154/48), nbr=2
+FAT32 at 491637(30/154/49), nbr=1
+FAT32 at 491639(30/154/51), nbr=3
+FAT32 at 491642(30/154/54), nbr=1
+FAT32 at 491644(30/154/56), nbr=1
+FAT32 at 491645(30/154/57), nbr=1
+FAT32 at 491647(30/154/59), nbr=1
+FAT32 at 491648(30/154/60), nbr=1
+FAT32 at 491650(30/154/62), nbr=1
+FAT32 at 160535(9/254/12), nbr=1
+FAT32 at 491653(30/155/2), nbr=1
+FAT32 at 491654(30/155/3), nbr=1
+FAT32 at 491656(30/155/5), nbr=1
+FAT32 at 491657(30/155/6), nbr=1
+FAT32 at 491659(30/155/8), nbr=1
+FAT32 at 491660(30/155/9), nbr=1
+FAT32 at 491662(30/155/11), nbr=1
+FAT32 at 491663(30/155/12), nbr=1
+FAT32 at 491665(30/155/14), nbr=1
+FAT32 at 491666(30/155/15), nbr=1
+FAT32 at 491668(30/155/17), nbr=1
+FAT32 at 491671(30/155/20), nbr=1
+FAT32 at 299846(18/170/30), nbr=1
+FAT32 at 491674(30/155/23), nbr=1
+FAT32 at 491677(30/155/26), nbr=1
+FAT32 at 491678(30/155/27), nbr=1
+FAT32 at 491680(30/155/29), nbr=1
+FAT32 at 491681(30/155/30), nbr=1
+FAT32 at 491683(30/155/32), nbr=1
+FAT32 at 491686(30/155/35), nbr=1
+FAT32 at 491687(30/155/36), nbr=1
+FAT32 at 491689(30/155/38), nbr=1
+FAT32 at 491690(30/155/39), nbr=1
+FAT32 at 491691(30/155/40), nbr=1
+FAT32 at 491692(30/155/41), nbr=1
+FAT32 at 491694(30/155/43), nbr=1
+FAT32 at 491695(30/155/44), nbr=1
+FAT32 at 491697(30/155/46), nbr=1
+FAT32 at 491700(30/155/49), nbr=1
+FAT32 at 491701(30/155/50), nbr=1
+FAT32 at 491703(30/155/52), nbr=1
+FAT32 at 984(0/16/40), nbr=1
+FAT32 at 491706(30/155/55), nbr=1
+FAT32 at 491707(30/155/56), nbr=1
+FAT32 at 491709(30/155/58), nbr=1
+FAT32 at 491712(30/155/61), nbr=1
+FAT32 at 491713(30/155/62), nbr=1
+FAT32 at 491715(30/156/1), nbr=1
+FAT32 at 491718(30/156/4), nbr=1
+FAT32 at 491719(30/156/5), nbr=1
+FAT32 at 491721(30/156/7), nbr=1
+FAT32 at 491724(30/156/10), nbr=1
+FAT32 at 491725(30/156/11), nbr=1
+FAT32 at 491727(30/156/13), nbr=1
+FAT32 at 491728(30/156/14), nbr=1
+FAT32 at 491730(30/156/16), nbr=1
+FAT32 at 491733(30/156/19), nbr=1
+FAT32 at 491734(30/156/20), nbr=1
+FAT32 at 491736(30/156/22), nbr=1
+FAT32 at 491737(30/156/23), nbr=1
+FAT32 at 491738(30/156/24), nbr=1
+FAT32 at 491739(30/156/25), nbr=1
+FAT32 at 491741(30/156/27), nbr=1
+FAT32 at 491744(30/156/30), nbr=1
+FAT32 at 491745(30/156/31), nbr=1
+FAT32 at 491747(30/156/33), nbr=1
+FAT32 at 491748(30/156/34), nbr=1
+FAT32 at 491750(30/156/36), nbr=1
+FAT32 at 491751(30/156/37), nbr=1
+FAT32 at 491753(30/156/39), nbr=1
+FAT32 at 491754(30/156/40), nbr=1
+FAT32 at 491756(30/156/42), nbr=1
+FAT32 at 491757(30/156/43), nbr=1
+FAT32 at 491759(30/156/45), nbr=1
+FAT32 at 491760(30/156/46), nbr=1
+FAT32 at 491762(30/156/48), nbr=1
+FAT32 at 491765(30/156/51), nbr=1
+FAT32 at 491766(30/156/52), nbr=1
+FAT32 at 491768(30/156/54), nbr=1
+FAT32 at 26564(1/167/42), nbr=1
+FAT32 at 491771(30/156/57), nbr=1
+FAT32 at 491772(30/156/58), nbr=1
+FAT32 at 491774(30/156/60), nbr=1
+FAT32 at 491775(30/156/61), nbr=1
+FAT32 at 491777(30/156/63), nbr=1
+FAT32 at 491778(30/157/1), nbr=1
+FAT32 at 491780(30/157/3), nbr=1
+FAT32 at 491781(30/157/4), nbr=1
+FAT32 at 491783(30/157/6), nbr=1
+FAT32 at 491784(30/157/7), nbr=1
+FAT32 at 491785(30/157/8), nbr=1
+FAT32 at 491786(30/157/9), nbr=1
+FAT32 at 491788(30/157/11), nbr=1
+FAT32 at 491789(30/157/12), nbr=1
+FAT32 at 491791(30/157/14), nbr=1
+FAT32 at 491792(30/157/15), nbr=1
+FAT32 at 491794(30/157/17), nbr=1
+FAT32 at 491795(30/157/18), nbr=1
+FAT32 at 491797(30/157/20), nbr=1
+FAT32 at 491798(30/157/21), nbr=1
+FAT32 at 491800(30/157/23), nbr=1
+FAT32 at 491801(30/157/24), nbr=1
+FAT32 at 491803(30/157/26), nbr=1
+FAT32 at 491804(30/157/27), nbr=1
+FAT32 at 491806(30/157/29), nbr=1
+FAT32 at 491807(30/157/30), nbr=1
+FAT32 at 491809(30/157/32), nbr=1
+FAT32 at 491810(30/157/33), nbr=1
+FAT32 at 491812(30/157/35), nbr=1
+FAT32 at 491815(30/157/38), nbr=1
+FAT32 at 491818(30/157/41), nbr=1
+FAT32 at 32199(2/2/7), nbr=1
+FAT32 at 491821(30/157/44), nbr=1
+FAT32 at 491822(30/157/45), nbr=1
+FAT32 at 491824(30/157/47), nbr=1
+FAT32 at 491825(30/157/48), nbr=1
+FAT32 at 491827(30/157/50), nbr=1
+FAT32 at 491828(30/157/51), nbr=1
+FAT32 at 491830(30/157/53), nbr=1
+FAT32 at 491831(30/157/54), nbr=1
+FAT32 at 491832(30/157/55), nbr=1
+FAT32 at 491833(30/157/56), nbr=1
+FAT32 at 491835(30/157/58), nbr=1
+FAT32 at 491836(30/157/59), nbr=1
+FAT32 at 491838(30/157/61), nbr=1
+FAT32 at 491839(30/157/62), nbr=1
+FAT32 at 491841(30/158/1), nbr=1
+FAT32 at 491842(30/158/2), nbr=1
+FAT32 at 491844(30/158/4), nbr=1
+FAT32 at 491845(30/158/5), nbr=1
+FAT32 at 491847(30/158/7), nbr=1
+FAT32 at 491848(30/158/8), nbr=1
+FAT32 at 491850(30/158/10), nbr=1
+FAT32 at 491851(30/158/11), nbr=1
+FAT32 at 491853(30/158/13), nbr=1
+FAT32 at 491856(30/158/16), nbr=1
+FAT32 at 491857(30/158/17), nbr=1
+FAT32 at 492144(30/162/52), nbr=1
+FAT32 at 491940(30/159/37), nbr=2
+FAT32 at 492344(30/165/63), nbr=1
+FAT32 at 492345(30/166/1), nbr=1
+FAT32 at 492346(30/166/2), nbr=1
+FAT32 at 492347(30/166/3), nbr=1
+FAT32 at 492351(30/166/7), nbr=1
+FAT32 at 492353(30/166/9), nbr=1
+FAT32 at 492354(30/166/10), nbr=1
+FAT32 at 492355(30/166/11), nbr=1
+FAT32 at 492356(30/166/12), nbr=1
+FAT32 at 492357(30/166/13), nbr=1
+FAT32 at 492359(30/166/15), nbr=1
+FAT32 at 492360(30/166/16), nbr=1
+FAT32 at 492361(30/166/17), nbr=1
+FAT32 at 492362(30/166/18), nbr=1
+FAT32 at 492363(30/166/19), nbr=1
+FAT32 at 492364(30/166/20), nbr=1
+FAT32 at 492365(30/166/21), nbr=1
+FAT32 at 492366(30/166/22), nbr=1
+FAT32 at 492367(30/166/23), nbr=1
+FAT32 at 492368(30/166/24), nbr=1
+FAT32 at 492369(30/166/25), nbr=1
+FAT32 at 492370(30/166/26), nbr=1
+FAT32 at 492371(30/166/27), nbr=1
+FAT32 at 492372(30/166/28), nbr=1
+FAT32 at 492373(30/166/29), nbr=1
+FAT32 at 492374(30/166/30), nbr=1
+FAT32 at 492375(30/166/31), nbr=1
+FAT32 at 492157(30/163/2), nbr=3
+FAT32 at 492482(30/168/12), nbr=1
+FAT32 at 492615(30/170/19), nbr=1
+FAT32 at 492764(30/172/42), nbr=1
+FAT32 at 493140(30/178/40), nbr=1
+FAT32 at 493185(30/179/22), nbr=1
+FAT32 at 492973(30/175/62), nbr=1
+FAT32 at 493040(30/177/3), nbr=1
+FAT32 at 493168(30/179/5), nbr=2
+FAT32 at 493479(30/184/1), nbr=1
+FAT32 at 493601(30/185/60), nbr=2
+FAT32 at 493857(30/190/1), nbr=2
+FAT32 at 494114(30/194/6), nbr=3
+FAT32 at 494964(30/207/37), nbr=1
+FAT32 at 494965(30/207/38), nbr=1
+FAT32 at 494966(30/207/39), nbr=1
+FAT32 at 495238(30/211/59), nbr=1
+FAT32 at 496648(30/234/20), nbr=1
+FAT32 at 496783(30/236/29), nbr=1
+FAT32 at 497359(30/245/38), nbr=1
+FAT32 at 498512(31/8/57), nbr=1
+FAT32 at 498540(31/9/22), nbr=1
+FAT32 at 498556(31/9/38), nbr=1
+FAT32 at 499543(31/25/17), nbr=1
+FAT32 at 501379(31/54/26), nbr=1
+FAT32 at 501820(31/61/26), nbr=1
+FAT32 at 503620(31/89/62), nbr=1
+FAT32 at 503783(31/92/36), nbr=1
+FAT32 at 505644(31/122/7), nbr=1
+FAT32 at 513129(31/240/58), nbr=1
+FAT32 at 513488(31/246/39), nbr=1
+FAT32 at 514613(32/9/30), nbr=1
+FAT32 at 516398(32/37/51), nbr=1
+FAT32 at 516462(32/38/52), nbr=1
+FAT32 at 516994(32/47/17), nbr=1
+FAT32 at 517633(32/57/26), nbr=1
+FAT32 at 519286(32/83/41), nbr=1
+FAT32 at 520085(32/96/21), nbr=1
+FAT32 at 520118(32/96/54), nbr=1
+FAT32 at 522041(32/127/24), nbr=1
+FAT32 at 523149(32/144/61), nbr=1
+FAT32 at 523646(32/152/54), nbr=1
+FAT32 at 524277(32/162/55), nbr=1
+FAT32 at 525926(32/189/3), nbr=1
+FAT32 at 527900(32/220/24), nbr=1
+FAT32 at 528971(32/237/24), nbr=1
+FAT32 at 529123(32/239/50), nbr=1
+FAT32 at 529643(32/248/3), nbr=1
+FAT32 at 529928(32/252/36), nbr=1
+FAT32 at 532128(33/32/31), nbr=1
+FAT32 at 533288(33/50/57), nbr=1
+FAT32 at 534251(33/66/12), nbr=1
+FAT32 at 534293(33/66/54), nbr=1
+FAT32 at 534317(33/67/15), nbr=1
+FAT32 at 600598(37/99/20), nbr=1
+FAT32 at 618642(38/130/46), nbr=1
+FAT32 at 618744(38/132/22), nbr=1
+FAT32 at 618760(38/132/38), nbr=1
+FAT32 at 618766(38/132/44), nbr=1
+FAT32 at 618895(38/134/47), nbr=1
+FAT32 at 618948(38/135/37), nbr=8
+FAT32 at 619928(38/151/9), nbr=1
+FAT32 at 620038(38/152/56), nbr=1
+FAT32 at 620166(38/154/58), nbr=1
+FAT32 at 620293(38/156/59), nbr=1
+FAT32 at 620419(38/158/59), nbr=1
+FAT32 at 620488(38/160/2), nbr=1
+FAT32 at 620491(38/160/5), nbr=1
+FAT32 at 379897(23/166/8), nbr=1
+FAT32 at 620497(38/160/11), nbr=1
+FAT32 at 620500(38/160/14), nbr=1
+FAT32 at 620503(38/160/17), nbr=1
+FAT32 at 620506(38/160/20), nbr=1
+FAT32 at 620511(38/160/25), nbr=1
+FAT32 at 620520(38/160/34), nbr=1
+FAT32 at 620523(38/160/37), nbr=1
+FAT32 at 513056(31/239/48), nbr=1
+FAT32 at 620532(38/160/46), nbr=1
+FAT32 at 620535(38/160/49), nbr=1
+FAT32 at 7245(0/116/1), nbr=1
+FAT32 at 620544(38/160/58), nbr=1
+FAT32 at 620546(38/160/60), nbr=2
+FAT32 at 620549(38/160/63), nbr=1
+FAT32 at 620555(38/161/6), nbr=1
+FAT32 at 620558(38/161/9), nbr=1
+FAT32 at 620568(38/161/19), nbr=1
+FAT32 at 370234(23/12/47), nbr=1
+FAT32 at 270963(16/222/1), nbr=1
+FAT32 at 620580(38/161/31), nbr=1
+FAT32 at 620582(38/161/33), nbr=1
+FAT32 at 620585(38/161/36), nbr=1
+FAT32 at 620588(38/161/39), nbr=1
+FAT32 at 620591(38/161/42), nbr=1
+FAT32 at 620594(38/161/45), nbr=1
+FAT32 at 620597(38/161/48), nbr=1
+FAT32 at 620600(38/161/51), nbr=1
+FAT32 at 620606(38/161/57), nbr=1
+FAT32 at 620614(38/162/2), nbr=1
+FAT32 at 620620(38/162/8), nbr=1
+FAT32 at 620623(38/162/11), nbr=1
+FAT32 at 620626(38/162/14), nbr=1
+FAT32 at 620629(38/162/17), nbr=1
+FAT32 at 620632(38/162/20), nbr=1
+FAT32 at 620635(38/162/23), nbr=1
+FAT32 at 620641(38/162/29), nbr=1
+FAT32 at 620644(38/162/32), nbr=1
+FAT32 at 620649(38/162/37), nbr=1
+FAT32 at 620650(38/162/38), nbr=1
+FAT32 at 620655(38/162/43), nbr=1
+FAT32 at 493181(30/179/18), nbr=1
+FAT32 at 620664(38/162/52), nbr=1
+FAT32 at 620680(38/163/5), nbr=1
+FAT32 at 620683(38/163/8), nbr=1
+FAT32 at 620684(38/163/9), nbr=1
+FAT32 at 620686(38/163/11), nbr=1
+FAT32 at 620689(38/163/14), nbr=1
+FAT32 at 620674(38/162/62), nbr=1
+FAT32 at 620692(38/163/17), nbr=1
+FAT32 at 620693(38/163/18), nbr=1
+FAT32 at 620695(38/163/20), nbr=1
+FAT32 at 620697(38/163/22), nbr=1
+FAT32 at 620698(38/163/23), nbr=1
+FAT32 at 620699(38/163/24), nbr=1
+FAT32 at 620700(38/163/25), nbr=1
+FAT32 at 620701(38/163/26), nbr=1
+FAT32 at 620706(38/163/31), nbr=1
+FAT32 at 620709(38/163/34), nbr=1
+FAT32 at 620710(38/163/35), nbr=1
+FAT32 at 620712(38/163/37), nbr=1
+FAT32 at 620713(38/163/38), nbr=1
+FAT32 at 620714(38/163/39), nbr=1
+FAT32 at 620715(38/163/40), nbr=1
+FAT32 at 620716(38/163/41), nbr=1
+FAT32 at 620717(38/163/42), nbr=1
+FAT32 at 620718(38/163/43), nbr=1
+FAT32 at 620719(38/163/44), nbr=1
+FAT32 at 620722(38/163/47), nbr=1
+FAT32 at 620725(38/163/50), nbr=1
+FAT32 at 620728(38/163/53), nbr=1
+FAT32 at 620731(38/163/56), nbr=1
+FAT32 at 620733(38/163/58), nbr=1
+FAT32 at 620734(38/163/59), nbr=1
+FAT32 at 620736(38/163/61), nbr=1
+FAT32 at 620740(38/164/2), nbr=1
+FAT32 at 620744(38/164/6), nbr=1
+FAT32 at 620745(38/164/7), nbr=1
+FAT32 at 620748(38/164/10), nbr=1
+FAT32 at 620750(38/164/12), nbr=1
+FAT32 at 620751(38/164/13), nbr=1
+FAT32 at 620752(38/164/14), nbr=1
+FAT32 at 620753(38/164/15), nbr=1
+FAT32 at 620754(38/164/16), nbr=1
+FAT32 at 620755(38/164/17), nbr=1
+FAT32 at 620756(38/164/18), nbr=1
+FAT32 at 620758(38/164/20), nbr=1
+FAT32 at 620759(38/164/21), nbr=1
+FAT32 at 620760(38/164/22), nbr=1
+FAT32 at 620761(38/164/23), nbr=1
+FAT32 at 620762(38/164/24), nbr=1
+FAT32 at 620764(38/164/26), nbr=1
+FAT32 at 620765(38/164/27), nbr=1
+FAT32 at 620766(38/164/28), nbr=1
+FAT32 at 620767(38/164/29), nbr=1
+FAT32 at 620768(38/164/30), nbr=1
+FAT32 at 620769(38/164/31), nbr=1
+FAT32 at 620770(38/164/32), nbr=1
+FAT32 at 620771(38/164/33), nbr=1
+FAT32 at 620772(38/164/34), nbr=1
+FAT32 at 620773(38/164/35), nbr=1
+FAT32 at 620775(38/164/37), nbr=1
+FAT32 at 620776(38/164/38), nbr=1
+FAT32 at 620777(38/164/39), nbr=1
+FAT32 at 620778(38/164/40), nbr=1
+FAT32 at 620779(38/164/41), nbr=1
+FAT32 at 620781(38/164/43), nbr=1
+FAT32 at 620782(38/164/44), nbr=1
+FAT32 at 620784(38/164/46), nbr=1
+FAT32 at 620785(38/164/47), nbr=1
+FAT32 at 620787(38/164/49), nbr=1
+FAT32 at 620788(38/164/50), nbr=1
+FAT32 at 620790(38/164/52), nbr=1
+FAT32 at 620791(38/164/53), nbr=1
+FAT32 at 620792(38/164/54), nbr=1
+FAT32 at 620793(38/164/55), nbr=1
+FAT32 at 620794(38/164/56), nbr=1
+FAT32 at 620795(38/164/57), nbr=1
+FAT32 at 620796(38/164/58), nbr=1
+FAT32 at 620797(38/164/59), nbr=1
+FAT32 at 620799(38/164/61), nbr=1
+FAT32 at 620800(38/164/62), nbr=2
+FAT32 at 620802(38/165/1), nbr=1
+FAT32 at 620803(38/165/2), nbr=1
+FAT32 at 620805(38/165/4), nbr=1
+FAT32 at 620806(38/165/5), nbr=1
+FAT32 at 620808(38/165/7), nbr=1
+FAT32 at 620810(38/165/9), nbr=1
+FAT32 at 620811(38/165/10), nbr=1
+FAT32 at 620812(38/165/11), nbr=1
+FAT32 at 620814(38/165/13), nbr=1
+FAT32 at 620819(38/165/18), nbr=1
+FAT32 at 620820(38/165/19), nbr=1
+FAT32 at 620826(38/165/25), nbr=1
+FAT32 at 620831(38/165/30), nbr=1
+FAT32 at 620834(38/165/33), nbr=1
+FAT32 at 620836(38/165/35), nbr=1
+FAT32 at 620838(38/165/37), nbr=1
+FAT32 at 620839(38/165/38), nbr=1
+FAT32 at 620840(38/165/39), nbr=1
+FAT32 at 620841(38/165/40), nbr=1
+FAT32 at 620843(38/165/42), nbr=1
+FAT32 at 620844(38/165/43), nbr=1
+FAT32 at 620845(38/165/44), nbr=1
+FAT32 at 620846(38/165/45), nbr=1
+FAT32 at 620847(38/165/46), nbr=1
+FAT32 at 620849(38/165/48), nbr=1
+FAT32 at 620850(38/165/49), nbr=1
+FAT32 at 620853(38/165/52), nbr=1
+FAT32 at 620854(38/165/53), nbr=1
+FAT32 at 620855(38/165/54), nbr=1
+FAT32 at 620856(38/165/55), nbr=1
+FAT32 at 620857(38/165/56), nbr=1
+FAT32 at 620858(38/165/57), nbr=1
+FAT32 at 620859(38/165/58), nbr=1
+FAT32 at 620860(38/165/59), nbr=1
+FAT32 at 620861(38/165/60), nbr=1
+FAT32 at 620865(38/166/1), nbr=1
+FAT32 at 620866(38/166/2), nbr=1
+FAT32 at 620869(38/166/5), nbr=1
+FAT32 at 620872(38/166/8), nbr=1
+FAT32 at 620878(38/166/14), nbr=1
+FAT32 at 620881(38/166/17), nbr=1
+FAT32 at 620883(38/166/19), nbr=1
+FAT32 at 620884(38/166/20), nbr=1
+FAT32 at 620887(38/166/23), nbr=1
+FAT32 at 620888(38/166/24), nbr=1
+FAT32 at 620890(38/166/26), nbr=1
+FAT32 at 620891(38/166/27), nbr=1
+FAT32 at 620893(38/166/29), nbr=1
+FAT32 at 620894(38/166/30), nbr=1
+FAT32 at 620895(38/166/31), nbr=1
+FAT32 at 620896(38/166/32), nbr=1
+FAT32 at 620897(38/166/33), nbr=1
+FAT32 at 620899(38/166/35), nbr=1
+FAT32 at 620900(38/166/36), nbr=1
+FAT32 at 620902(38/166/38), nbr=1
+FAT32 at 2287360(142/98/20), nbr=1
+FAT32 at 2054262(127/223/22), nbr=10
+FAT32 at 2042648(127/38/63), nbr=2
+FAT32 at 1522274(94/194/6), nbr=19
+FAT32 at 1522273(94/194/5), nbr=127
+FAT32 at 1522272(94/194/4), nbr=127
+FAT32 at 1522271(94/194/3), nbr=127
+FAT32 at 1522270(94/194/2), nbr=127
+FAT32 at 1522269(94/194/1), nbr=40
+FAT32 at 1521473(94/181/24), nbr=2
+FAT32 at 1521084(94/175/13), nbr=3
+FAT32 at 1520244(94/161/55), nbr=6
+FAT32 at 1519555(94/150/59), nbr=6
+FAT32 at 1519328(94/147/21), nbr=2
+FAT32 at 1518863(94/139/60), nbr=2
+FAT32 at 1517171(94/113/6), nbr=14
+FAT32 at 1513898(94/61/9), nbr=21
+FAT32 at 1244043(77/112/46), nbr=4
+FAT32 at 1154755(71/225/29), nbr=2
+FAT32 at 990561(61/169/13), nbr=18
+FAT32 at 630142(39/58/17), nbr=8
+FAT32 at 629525(39/48/30), nbr=3
+first_fat 32, second_fat 238400
+FAT : 32, reserved=32, fat_length=238368
+sectors_per_cluster 32
+next_free 3, free_count 30509100
+fat32_find_root_cluster(sectors_per_cluster=32,no_of_cluster=30509101,reserved=32,fat_length=238368,expert=0,first_free_cluster=3)
+Search root cluster stopped:       4097 (2..30509102)
+No first-level directory found.
+             New / Current boot sector
+FAT32
+sector_size  512 512
+cluster_size 32 32
+reserved     32 32
+fats         2 2
+dir_entries  0 0
+sectors      0 0
+media        F8 F8
+fat_length   0 0
+secs_track   63 63
+heads        255 255
+hidden       63 0
+total_sect   976768002 976768002
+fat32_length 238368 238368
+flags        0000 0000
+version      0.0  0.0
+root_cluster 0 2
+info_sector  1 1
+backup_boot  6 6
+free_count   18446744073709551615 30509100
+next_free    18446744073709551615 2
+Extrapolated boot sector and current boot sector are different.
+Warning: Extrapolated boot sector have incorrect values.
+     Rebuild Boot sector           Boot sector
+0000 eb58904d 5357494e   .X.MSWIN  eb58906d 6b646f73   .X.mkdos
+0008 342e3100 02202000   4.1..  .  66730000 02202000   fs...  .
+0010 02000000 00f80000   ........  02000000 00f80000   ........
+0018 3f00ff00 3f000000   ?...?...  3f00ff00 00000000   ?.......
+0020 024c383a 20a30300   .L8: ...  024c383a 20a30300   .L8: ...
+0028 00000000 00000000   ........  00000000 02000000   ........
+0030 01000600 00000000   ........  01000600 00000000   ........
+0038 00000000 00000000   ........  00000000 00000000   ........
+0040 800029a0 e0a8e120   ..)....   000029a0 e0a8e120   ..).... 
+0048 20202020 20202020             20202020 20202020           
+0050 20204641 54333220     FAT32   20204641 54333220     FAT32 
+0058 20200e1f be777cac     ...w|.  20200e1f be777cac     ...w|.
+0060 22c0740b 56b40ebb   ".t.V...  22c0740b 56b40ebb   ".t.V...
+0068 0700cd10 5eebf032   ....^..2  0700cd10 5eebf032   ....^..2
+0070 e4cd16cd 19ebfe54   .......T  e4cd16cd 19ebfe54   .......T
+0078 68697320 6973206e   his is n  68697320 6973206e   his is n
+0080 6f742061 20626f6f   ot a boo  6f742061 20626f6f   ot a boo
+0088 7461626c 65206469   table di  7461626c 65206469   table di
+0090 736b2e20 20506c65   sk.  Ple  736b2e20 20506c65   sk.  Ple
+0098 61736520 696e7365   ase inse  61736520 696e7365   ase inse
+00A0 72742061 20626f6f   rt a boo  72742061 20626f6f   rt a boo
+00A8 7461626c 6520666c   table fl  7461626c 6520666c   table fl
+00B0 6f707079 20616e64   oppy and  6f707079 20616e64   oppy and
+00B8 0d0a7072 65737320   ..press   0d0a7072 65737320   ..press 
+00C0 616e7920 6b657920   any key   616e7920 6b657920   any key 
+00C8 746f2074 72792061   to try a  746f2074 72792061   to try a
+00D0 6761696e 202e2e2e   gain ...  6761696e 202e2e2e   gain ...
+00D8 200d0a00 00000000    .......  200d0a00 00000000    .......
+00E0 00000000 00000000   ........  00000000 00000000   ........
+00E8 00000000 00000000   ........  00000000 00000000   ........
+00F0 00000000 00000000   ........  00000000 00000000   ........
+00F8 00000000 00000000   ........  00000000 00000000   ........
+0100 00000000 00000000   ........  00000000 00000000   ........
+0108 00000000 00000000   ........  00000000 00000000   ........
+0110 00000000 00000000   ........  00000000 00000000   ........
+0118 00000000 00000000   ........  00000000 00000000   ........
+0120 00000000 00000000   ........  00000000 00000000   ........
+0128 00000000 00000000   ........  00000000 00000000   ........
+0130 00000000 00000000   ........  00000000 00000000   ........
+0138 00000000 00000000   ........  00000000 00000000   ........
+0140 00000000 00000000   ........  00000000 00000000   ........
+0148 00000000 00000000   ........  00000000 00000000   ........
+0150 00000000 00000000   ........  00000000 00000000   ........
+0158 00000000 00000000   ........  00000000 00000000   ........
+0160 00000000 00000000   ........  00000000 00000000   ........
+0168 00000000 00000000   ........  00000000 00000000   ........
+0170 00000000 00000000   ........  00000000 00000000   ........
+0178 00000000 00000000   ........  00000000 00000000   ........
+0180 00000000 00000000   ........  00000000 00000000   ........
+0188 00000000 00000000   ........  00000000 00000000   ........
+0190 00000000 00000000   ........  00000000 00000000   ........
+0198 00000000 00000000   ........  00000000 00000000   ........
+01A0 00000000 00000000   ........  00000000 00000000   ........
+01A8 00000000 00000000   ........  00000000 00000000   ........
+01B0 00000000 00000000   ........  00000000 00000000   ........
+01B8 00000000 00000000   ........  00000000 00000000   ........
+01C0 00000000 00000000   ........  00000000 00000000   ........
+01C8 00000000 00000000   ........  00000000 00000000   ........
+01D0 00000000 00000000   ........  00000000 00000000   ........
+01D8 00000000 00000000   ........  00000000 00000000   ........
+01E0 00000000 00000000   ........  00000000 00000000   ........
+01E8 00000000 00000000   ........  00000000 00000000   ........
+01F0 00000000 00000000   ........  00000000 00000000   ........
+01F8 00000000 000055aa   ......U.  00000000 000055aa   ......U.
+0200 52526141 00000000   RRaA....  52526141 00000000   RRaA....
+0208 00000000 00000000   ........  00000000 00000000   ........
+0210 00000000 00000000   ........  00000000 00000000   ........
+0218 00000000 00000000   ........  00000000 00000000   ........
+0220 00000000 00000000   ........  00000000 00000000   ........
+0228 00000000 00000000   ........  00000000 00000000   ........
+0230 00000000 00000000   ........  00000000 00000000   ........
+0238 00000000 00000000   ........  00000000 00000000   ........
+0240 00000000 00000000   ........  00000000 00000000   ........
+0248 00000000 00000000   ........  00000000 00000000   ........
+0250 00000000 00000000   ........  00000000 00000000   ........
+0258 00000000 00000000   ........  00000000 00000000   ........
+0260 00000000 00000000   ........  00000000 00000000   ........
+0268 00000000 00000000   ........  00000000 00000000   ........
+0270 00000000 00000000   ........  00000000 00000000   ........
+0278 00000000 00000000   ........  00000000 00000000   ........
+0280 00000000 00000000   ........  00000000 00000000   ........
+0288 00000000 00000000   ........  00000000 00000000   ........
+0290 00000000 00000000   ........  00000000 00000000   ........
+0298 00000000 00000000   ........  00000000 00000000   ........
+02A0 00000000 00000000   ........  00000000 00000000   ........
+02A8 00000000 00000000   ........  00000000 00000000   ........
+02B0 00000000 00000000   ........  00000000 00000000   ........
+02B8 00000000 00000000   ........  00000000 00000000   ........
+02C0 00000000 00000000   ........  00000000 00000000   ........
+02C8 00000000 00000000   ........  00000000 00000000   ........
+02D0 00000000 00000000   ........  00000000 00000000   ........
+02D8 00000000 00000000   ........  00000000 00000000   ........
+02E0 00000000 00000000   ........  00000000 00000000   ........
+02E8 00000000 00000000   ........  00000000 00000000   ........
+02F0 00000000 00000000   ........  00000000 00000000   ........
+02F8 00000000 00000000   ........  00000000 00000000   ........
+0300 00000000 00000000   ........  00000000 00000000   ........
+0308 00000000 00000000   ........  00000000 00000000   ........
+0310 00000000 00000000   ........  00000000 00000000   ........
+0318 00000000 00000000   ........  00000000 00000000   ........
+0320 00000000 00000000   ........  00000000 00000000   ........
+0328 00000000 00000000   ........  00000000 00000000   ........
+0330 00000000 00000000   ........  00000000 00000000   ........
+0338 00000000 00000000   ........  00000000 00000000   ........
+0340 00000000 00000000   ........  00000000 00000000   ........
+0348 00000000 00000000   ........  00000000 00000000   ........
+0350 00000000 00000000   ........  00000000 00000000   ........
+0358 00000000 00000000   ........  00000000 00000000   ........
+0360 00000000 00000000   ........  00000000 00000000   ........
+0368 00000000 00000000   ........  00000000 00000000   ........
+0370 00000000 00000000   ........  00000000 00000000   ........
+0378 00000000 00000000   ........  00000000 00000000   ........
+0380 00000000 00000000   ........  00000000 00000000   ........
+0388 00000000 00000000   ........  00000000 00000000   ........
+0390 00000000 00000000   ........  00000000 00000000   ........
+0398 00000000 00000000   ........  00000000 00000000   ........
+03A0 00000000 00000000   ........  00000000 00000000   ........
+03A8 00000000 00000000   ........  00000000 00000000   ........
+03B0 00000000 00000000   ........  00000000 00000000   ........
+03B8 00000000 00000000   ........  00000000 00000000   ........
+03C0 00000000 00000000   ........  00000000 00000000   ........
+03C8 00000000 00000000   ........  00000000 00000000   ........
+03D0 00000000 00000000   ........  00000000 00000000   ........
+03D8 00000000 00000000   ........  00000000 00000000   ........
+03E0 00000000 72724161   ....rrAa  00000000 72724161   ....rrAa
+03E8 ffffffff ffffffff   ........  2c88d101 02000000   ,.......
+03F0 00000000 00000000   ........  00000000 00000000   ........
+03F8 00000000 000055aa   ......U.  00000000 000055aa   ......U.
+0400 00000000 00000000   ........  00000000 00000000   ........
+0408 00000000 00000000   ........  00000000 00000000   ........
+0410 00000000 00000000   ........  00000000 00000000   ........
+0418 00000000 00000000   ........  00000000 00000000   ........
+0420 00000000 00000000   ........  00000000 00000000   ........
+0428 00000000 00000000   ........  00000000 00000000   ........
+0430 00000000 00000000   ........  00000000 00000000   ........
+0438 00000000 00000000   ........  00000000 00000000   ........
+0440 00000000 00000000   ........  00000000 00000000   ........
+0448 00000000 00000000   ........  00000000 00000000   ........
+0450 00000000 00000000   ........  00000000 00000000   ........
+0458 00000000 00000000   ........  00000000 00000000   ........
+0460 00000000 00000000   ........  00000000 00000000   ........
+0468 00000000 00000000   ........  00000000 00000000   ........
+0470 00000000 00000000   ........  00000000 00000000   ........
+0478 00000000 00000000   ........  00000000 00000000   ........
+0480 00000000 00000000   ........  00000000 00000000   ........
+0488 00000000 00000000   ........  00000000 00000000   ........
+0490 00000000 00000000   ........  00000000 00000000   ........
+0498 00000000 00000000   ........  00000000 00000000   ........
+04A0 00000000 00000000   ........  00000000 00000000   ........
+04A8 00000000 00000000   ........  00000000 00000000   ........
+04B0 00000000 00000000   ........  00000000 00000000   ........
+04B8 00000000 00000000   ........  00000000 00000000   ........
+04C0 00000000 00000000   ........  00000000 00000000   ........
+04C8 00000000 00000000   ........  00000000 00000000   ........
+04D0 00000000 00000000   ........  00000000 00000000   ........
+04D8 00000000 00000000   ........  00000000 00000000   ........
+04E0 00000000 00000000   ........  00000000 00000000   ........
+04E8 00000000 00000000   ........  00000000 00000000   ........
+04F0 00000000 00000000   ........  00000000 00000000   ........
+04F8 00000000 00000000   ........  00000000 00000000   ........
+0500 00000000 00000000   ........  00000000 00000000   ........
+0508 00000000 00000000   ........  00000000 00000000   ........
+0510 00000000 00000000   ........  00000000 00000000   ........
+0518 00000000 00000000   ........  00000000 00000000   ........
+0520 00000000 00000000   ........  00000000 00000000   ........
+0528 00000000 00000000   ........  00000000 00000000   ........
+0530 00000000 00000000   ........  00000000 00000000   ........
+0538 00000000 00000000   ........  00000000 00000000   ........
+0540 00000000 00000000   ........  00000000 00000000   ........
+0548 00000000 00000000   ........  00000000 00000000   ........
+0550 00000000 00000000   ........  00000000 00000000   ........
+0558 00000000 00000000   ........  00000000 00000000   ........
+0560 00000000 00000000   ........  00000000 00000000   ........
+0568 00000000 00000000   ........  00000000 00000000   ........
+0570 00000000 00000000   ........  00000000 00000000   ........
+0578 00000000 00000000   ........  00000000 00000000   ........
+0580 00000000 00000000   ........  00000000 00000000   ........
+0588 00000000 00000000   ........  00000000 00000000   ........
+0590 00000000 00000000   ........  00000000 00000000   ........
+0598 00000000 00000000   ........  00000000 00000000   ........
+05A0 00000000 00000000   ........  00000000 00000000   ........
+05A8 00000000 00000000   ........  00000000 00000000   ........
+05B0 00000000 00000000   ........  00000000 00000000   ........
+05B8 00000000 00000000   ........  00000000 00000000   ........
+05C0 00000000 00000000   ........  00000000 00000000   ........
+05C8 00000000 00000000   ........  00000000 00000000   ........
+05D0 00000000 00000000   ........  00000000 00000000   ........
+05D8 00000000 00000000   ........  00000000 00000000   ........
+05E0 00000000 00000000   ........  00000000 00000000   ........
+05E8 00000000 00000000   ........  00000000 00000000   ........
+05F0 00000000 00000000   ........  00000000 00000000   ........
+05F8 00000000 000055aa   ......U.  00000000 00000000   ........
+Warning: Extrapolated boot sector have incorrect values.
+
+
+dir_partition inode=0
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+FAT32: Can't list files, bad root cluster.
+Directory /
+Warning: Extrapolated boot sector have incorrect values.
+
+
+dir_partition inode=0
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+FAT32: Can't list files, bad root cluster.
+Directory /
+Warning: Extrapolated boot sector have incorrect values.
+
+
+dir_partition inode=0
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+FAT32: Can't list files, bad root cluster.
+Directory /
+Warning: Extrapolated boot sector have incorrect values.
+Don't write new boot!
+
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+
+fat32_boot_sector
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+FAT32 at 0/1/1
+Info: size boot_sector 976768002, partition 976768002
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+FAT32 at 0/1/1
+Info: size boot_sector 976768002, partition 976768002
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+Boot sector
+OK
+
+Backup boot sector
+OK
+
+Second sectors (cluster information) are not identical.
+
+A valid FAT Boot sector must be present in order to access
+any data; even if the partition is not bootable.
+New options :
+ Dump : No
+ Cylinder boundary : Yes
+ Allow partial last cylinder : Yes
+ Expert mode : No
+
+Analyse Disk /dev/sdc - 500 GB / 465 GiB - CHS 60802 255 63
+Geometry from i386 MBR: head=255 sector=63
+FAT32 at 0/1/1
+Info: size boot_sector 976768002, partition 976768002
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+Current partition structure:
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+Ask the user for vista mode
+Allow partial last cylinder : Yes
+search_vista_part: 1
+
+search_part()
+Disk /dev/sdc - 500 GB / 465 GiB - CHS 60802 255 63
+FAT32 at 0/1/1
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+
+FAT32 at 0/1/1
+     FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+
+Results
+   * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+
+interface_write()
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+
+search_part()
+Disk /dev/sdc - 500 GB / 465 GiB - CHS 60802 255 63
+FAT32 at 0/1/1
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+
+FAT32 at 0/1/1
+     FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+FAT32 at 0/1/7
+FAT1 : 32-238399
+FAT2 : 238400-476767
+start_rootdir : 476768 root cluster : 2
+Data : 476768-976767999
+sectors : 976768002
+cluster_size : 32
+no_of_cluster : 30509101 (2 - 30509102)
+fat_length 238368 calculated 238353
+set_FAT_info: name from BS used
+
+FAT32 at 0/1/7
+     FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT found using backup sector!, 500 GB / 465 GiB
+Search for partition aborted
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+
+Results
+   * FAT32 LBA                0   1  1 60800 254 63  976768002
+     FAT32, 500 GB / 465 GiB
+
+interface_write()
+ 1 * FAT32 LBA                0   1  1 60800 254 63  976768002
+simulate write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+No extended partition
+
+TestDisk exited normally.
