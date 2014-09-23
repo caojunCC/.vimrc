@@ -96,6 +96,8 @@ set showmatch
 " 在搜索的时候忽略大小写 
 set ignorecase 
 
+"去除工具栏
+set guioptions-=T
 
 set confirm                                                ""未保存已修改的文件和修改只读文件时确认
 set autoread                                               ""外部文件改变时自动读取
