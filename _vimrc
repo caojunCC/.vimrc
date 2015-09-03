@@ -66,7 +66,7 @@
 "F12 头文件和cpp文件切换
 ",ss source .vimrc
 ",ee 转换到.vimrc的bufer
-",*或者,# 在试图模式下选中需要搜索的单词再按下,*
+":,*或者,# 在试图模式下选中需要搜索的单词再按下,*
 ",bc 关闭buffer
 "ctrl+],CTRL+F, 插入模式下查找tage
 ":split otherfile  分割窗口 :15split ++fileformate=unix otherfile
@@ -99,8 +99,8 @@ set ignorecase
 "去除工具栏
 set guioptions-=T
 
-set confirm                                                ""未保存已修改的文件和修改只读文件时确认
-set autoread                                               ""外部文件改变时自动读取
+set confirm  ""未保存已修改的文件和修改只读文件时确认
+set autoread ""外部文件改变时自动读取
 set mouse=a
 set history=300
 "设置无swap文件
@@ -125,9 +125,9 @@ set incsearch       " 查询时非常方便，如要查找book单词，当输入
 
 "fold相 关
 set foldenable
-set foldcolumn=3
-set foldmethod=manual
-set cindent
+""set foldcolumn=3
+"set foldmethod=manual
+"set cindent
 
 "set foldmethod=manual
 "set foldlevel=0
@@ -140,18 +140,52 @@ let mapleader = ","
 let g:mapleader = ","
 
 "设置配色方案,字体
-set guifont=Ubuntu\ Mono\ 12
-set t_Co=256 
 "set guifont=YaHei_Consolas_Hybrid:h12:cANSI
 "set guifont=Lucida_Console:h12:cANSI
 colo molokai  
 let g:molokai_original = 1
 let g:rehash256 = 1
+set guifont=Ubuntu\ Mono\ 11.5
+set t_Co=256 
 
 
 "设置文件编码
 set fenc=utf-8
 set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936
+set laststatus=2
+
+"快速保存
+nmap <silent> <leader>bb :%!xxd<cr>
+nmap <silent> <leader>br :%!xxd -r<cr>
+nmap <silent> <leader>ww :w<cr>
+nmap <silent> <leader>wf :w!<cr>
+
+"Fast quiting
+nmap <silent> <leader>qw :wq<cr>
+nmap <silent> <leader>qf :q!<cr>
+nmap <silent> <leader>qq :q<cr>
+nmap <silent> <leader>qa :qa<cr>
+
+"use <c-i,j,h,k> to move cursor in different windows
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
+
+"use 
+nmap <leader>wv     <C-w>v.     " 垂直分割当前窗口
+nmap <leader>wc     <C-w>c.     " 关闭当前窗口
+nmap <leader>ws     <C-w>s..     " 水平分割当前窗口
+
+
+"fast change 2 hex mode
+map <leader>bh :%!xxd 
+map <Leader>bhr :%!xxd -r
+
+map <C-F12> :call Tags_Rebuild_Add()<CR>
+map <C-S-F12> :call Cscope_Rebuild_Add()<CR>
+map <leader>fl :NERDTreeToggle<CR>
+map <leader>wt :call TTagBar()<CR>
 
 "快速读取.vimrc
 function! MySys()
@@ -183,8 +217,8 @@ elseif MySys() == 'windows'
 endif
 
 function! SwitchToBuf(filename)
-    "let fullfn = substitute(a:filename, "^\\~/", $HOME . "/", "")
-    " find in current tab
+    let fullfn = substitute(a:filename, "^\\~/", $HOME . "/", "")
+    "find in current tab
     let bufwinnr = bufwinnr(a:filename)
     if bufwinnr != -1
         exec bufwinnr . "wincmd w"
@@ -204,7 +238,7 @@ function! SwitchToBuf(filename)
         let tab = tab + 1
         endwhile
 " not exist, new tab
-        exec "tabnew " . a:filename
+        exec "edit " . a:filename
         endif
 endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -221,107 +255,45 @@ elseif MySys() == 'windows'
 endif
 
 
-"快速保存
-nmap <silent> <leader>bb :%!xxd<cr>
-nmap <silent> <leader>br :%!xxd -r<cr>
-nmap <silent> <leader>ww :w<cr>
-nmap <silent> <leader>wf :w!<cr>
-
-"Fast quiting
-nmap <silent> <leader>qw :wq<cr>
-nmap <silent> <leader>qf :q!<cr>
-nmap <silent> <leader>qq :q<cr>
-nmap <silent> <leader>qa :qa<cr>
-
-"use <c-i,j,h,k> to move cursor in different windows
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-h> <C-W>h
-nmap <C-l> <C-W>l
-
-"use 
-nmap <leader>wv     <C-w>v.     " 垂直分割当前窗口
-nmap <leader>wc     <C-w>c.     " 关闭当前窗口
-nmap <leader>ws     <C-w>s..     " 水平分割当前窗口
-
-"fast add and remove /**/
-map <leader>g 0I/* <C-[>A */<C-[> 
-map <leader>G 03x$bh3x
-
-"fast change 2 hex mode
-map <leader>bh :%!xxd 
-map <Leader>bhr :%!xxd -r
-
 function! Tags_Rebuild_Add()
     exec "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./"
     set tags+=./tags 
 endfunction
-map <C-F12> :call Tags_Rebuild_Add()<CR>
-
 set tags+=./tags
 
 function! Cscope_Rebuild_Add()
     !cscope -Rbq
     :cs add ./cscope.out .
 endfunction
-map <C-S-F12> :call Cscope_Rebuild_Add()<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set statusline
-set laststatus=2
-function! CurDir()
-    let curdir = substitute(getcwd(), '/home/caojun/', "~/", "g")
-    return curdir
-endfunction
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\%r%{CurDir()}%h\ %=Position:\ %p\ line:%l\ col:%c\ char:%b\ \ \ 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"auto detect filetype
-augroup newFileDetection
-autocmd CursorMovedI * call CheckFileType()
-augroup END
-function! CheckFileType()
-  if exists("b:countCheck") == 0
-    let b:countCheck = 0
-  endif
-  let b:countCheck += 1
-  if  &filetype == "" && b:countCheck >20 && b:countCheck <100
-    filetype detect
-  elseif b:countCheck >=100 || &filetype !=""
-    autocmd! newFileDetection
-  endif
-endfunction
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "plugin
-"--------------------------------------------------------------------------------
-" TagList :Tlist
-"--------------------------------------------------------------------------------
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow = 1
 
-"--------------------------------------------------------------------------------
-" WinManager :WMToggle
-"--------------------------------------------------------------------------------
-""目录界面常用命令
-"<F1> 	显示帮助
-"<cr> 	如果光标下是目录, 则进入该目录; 如果光标下文件, 则打开该文件
-"-	返回上级目录
-"c	切换vim 当前工作目录正在浏览的目录
-"d	创建目录
-"D	删除目录或文件
-"i	切换显示方式
-"R	文件或目录重命名
-"s	选择排序方式
-"x	定制浏览方式, 使用你指定的程序打开该文件
+function! TTagBar()
+    let tagbar_open = bufwinnr('__Tagbar__') != -1
+    if tagbar_open
+        TagbarClose
+    else
+        TagbarOpen
+    endif
+endfunction
 
-let g:winManagerWindowLayout='FileExplorer,BufExplorer|TagList'
-let g:winManagerWidth = 30
-let g:defaultExplorer = 0
-"nmap <C-w><C-b> :BottomExplorerWindow<cr> " 切换到最下面一个窗格
-"nmap <C-w><C-f> :FirstExplorerWindow<cr>   " 切换到最上面一个窗格
-nmap <leader>wm :WMToggle<cr> "是nomal模式的命令，不是Ex模式的
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+"NERDTree"
+""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinSize=25
+autocmd vimEnter * NERDTree
+
+"""""""""""""""""""""""""""""""""""""""""""""
+"Tagbar
+""""""""""""""""""""""""""""""""""""""""""""
+let g:tagbar_width =35
+let g:tagbar_left =0
 
 "--------------------------------------------------------------------------------
 " cscope
@@ -337,8 +309,8 @@ nmap <leader>wm :WMToggle<cr> "是nomal模式的命令，不是Ex模式的
 "    6 或 e      查找本 egrep 模式
 "    7 或 f      查找本文件
 "    8 或 i      查找包含本文件的文件
-:set cscopequickfix=s-,c-,d-,i-,t-,e-
-:set cscopetag
+":set cscopequickfix=s-,c-,d-,i-,t-,e-
+":set cscopetag
 " 按下面这种组合键有技巧,按了<C-_>后要马上按下一个键,否则屏幕一闪
 " 就回到nomal状态了
 " <C-_>s的按法是先按"Ctrl+Shift+-",然后很快再按"s"
@@ -366,10 +338,10 @@ nmap <F7> :cp<cr>   " 切换到上一个结果
 "--------------------------------------------------------------------------------
 " MiniBufExp
 "--------------------------------------------------------------------------------
-"let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplModSelTarget = 1
+let g:miniBufExplModSelTarget = 1
 
 "--------------------------------------------------------------------------------
 " A 在头文件和cpp文件切换
@@ -393,21 +365,21 @@ nnoremap <silent> <F3> :Rgrep<CR>
 " SuperTab :SuperTabHelp
 "--------------------------------------------------------------------------------
 set completeopt=longest,menu
-"let g:SuperTabRetainCompletionType = 2
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabRetainCompletionType = 2
+"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 
 "--------------------------------------------------------------------------------
 " BufExplorer
 "--------------------------------------------------------------------------------
-let g:bufExplorerDefaultHelp=0       " Do not show default help.
-let g:bufExplorerShowRelativePath=1  " Show relative paths.
-let g:bufExplorerSortBy='mru'        " Sort by most recently used.
-let g:bufExplorerSplitRight=0        " Split left.
-let g:bufExplorerSplitVertical=1     " Split vertically.
-let g:bufExplorerSplitVertSize = 30  " Split width
-let g:bufExplorerUseCurrentWindow=1  " Open in new window.
-autocmd BufWinEnter \[Buf\ List\] setl nonumber 
+""let g:bufExplorerDefaultHelp=0       " Do not show default help.
+""let g:bufExplorerShowRelativePath=1  " Show relative paths.
+"let g:bufExplorerSortBy='mru'        " Sort by most recently used.
+"let g:bufExplorerSplitRight=0        " Split left.
+"let g:bufExplorerSplitVertical=1     " Split vertically.
+"let g:bufExplorerSplitVertSize = 30  " Split width
+"let g:bufExplorerUseCurrentWindow=1  " Open in new window.
+"autocmd BufWinEnter \[Buf\ List\] setl nonumber 
 """"""""""""""""""""""""""""""
 " showmarks setting
 """"""""""""""""""""""""""""""
@@ -420,3 +392,70 @@ let showmarks_ignore_type = "hqm"
 " Hilight lower & upper marks
 let showmarks_hlline_lower = 1
 let showmarks_hlline_upper = 1 
+
+let g:indexer_ctagsCommandLineOptions="--c++-kinds=+l+p+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
+"""""""""""""""""""""""""""
+"youcompleteme
+"""""""""""""""""""""""""""
+nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
+" 只能是 #include 或已打开的文件
+nnoremap <leader>je :YcmCompleter GoToDefinition<CR>"
+let g:ycm_confirm_extra_conf=0
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_seed_identifiers_with_syntax=1
+
+"""""""""""""""""""""""""""
+"syntastic
+"""""""""""""""""""""""""""
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_check_on_open = 1
+let g:syntastic_cpp_include_dirs = ['/usr/include/']
+let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
+let g:syntastic_enable_balloons = 1	"whether to show balloons
+
+"""""""""""""""""""""""""""""""""
+"vim-indent-guides
+"""""""""""""""""""""""""""""""""
+let g:indent_guides_enable_on_vim_startup = 1  "默认关闭
+let g:indent_guides_guide_size            = 1  "指定对齐线的尺寸
+let g:indent_guides_start_level 	  = 2  "从第二层开始可视化显示缩进
+""""""""""""""""""""""""""""
+"Bundle
+""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+"vimscript
+Plugin 'gmarik/Vundle.vim'
+Plugin 'c.vim'
+Plugin 'minibufexpl.vim'
+Plugin 'a.vim'
+"Plugin 'winmanager'
+Plugin 'showmarks'
+Plugin 'supertab'
+Plugin 'grep.vim'
+Plugin 'indexer.tar.gz'
+Plugin 'DfrankUtil'
+Plugin 'vimprj'
+Plugin 'google.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/AutoClose'
+Plugin 'bling/vim-airline'
+"Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'tomasr/molokai'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'godlygeek/tabular'
+call vundle#end()
+
