@@ -62,7 +62,7 @@
 ",zo 打开关闭折叠
 ",lk 查找文件
 ",ll 查找bufer
-"ctrl+F12 循环生成tage,并加入环境里面的tag
+"ctrl+F11 循环生成tage,并加入环境里面的tag
 "F12 头文件和cpp文件切换
 ",ss source .vimrc
 ",ee 转换到.vimrc的bufer
@@ -101,7 +101,7 @@ set guioptions-=T
 
 set confirm  ""未保存已修改的文件和修改只读文件时确认
 set autoread ""外部文件改变时自动读取
-set mouse=a
+set mouse=n
 set history=300
 "设置无swap文件
 set noswapfile
@@ -182,8 +182,7 @@ nmap <leader>ws     <C-w>s..     " 水平分割当前窗口
 map <leader>bh :%!xxd 
 map <Leader>bhr :%!xxd -r
 
-map <C-F12> :call Tags_Rebuild_Add()<CR>
-map <C-S-F12> :call Cscope_Rebuild_Add()<CR>
+map <leader>pb :call Pre_Rebuild()<CR>
 map <leader>fl :NERDTreeToggle<CR>
 map <leader>wt :call TTagBar()<CR>
 
@@ -254,6 +253,10 @@ elseif MySys() == 'windows'
     autocmd! bufwritepost _vimrc source ~/_vimrc
 endif
 
+function! Pre_Rebuild()
+    call Tags_Rebuild_Add()
+    call Cscope_Rebuild_Add()
+endfunction
 
 function! Tags_Rebuild_Add()
     exec "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./"
@@ -287,7 +290,7 @@ endfunction
 "NERDTree"
 """"""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinSize=25
-autocmd vimEnter * NERDTree
+""autocmd vimEnter * NERDTree
 
 """""""""""""""""""""""""""""""""""""""""""""
 "Tagbar
@@ -314,14 +317,14 @@ let g:tagbar_left =0
 " 按下面这种组合键有技巧,按了<C-_>后要马上按下一个键,否则屏幕一闪
 " 就回到nomal状态了
 " <C-_>s的按法是先按"Ctrl+Shift+-",然后很快再按"s"
-nmap <C-_>s :cs find s <C-R>=expand("<cword>")<cr><cr> :cw<cr>
-nmap <C-_>g :cs find g <C-R>=expand("<cword>")<cr><cr> :cw<cr>
-nmap <C-_>c :cs find c <C-R>=expand("<cword>")<cr><cr> :cw<cr>
-nmap <C-_>t :cs find t <C-R>=expand("<cword>")<cr><cr> :cw<cr>
-nmap <C-_>e :cs find e <C-R>=expand("<cword>")<cr><cr> :cw<cr>
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<cr><cr>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<cr><cr>
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<cr><cr>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<cr><cr>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<cr><cr>
 nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<cr><cr>
-nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<cr><cr> :cw<cr>
-nmap <C-_>d :cs find d <C-R>=expand("<cword>")<cr><cr> :cw<cr>
+nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<cr><cr>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<cr><cr>
 
 "--------------------------------------------------------------------------------
 " QuickFix
@@ -403,6 +406,7 @@ nnoremap <leader>je :YcmCompleter GoToDefinition<CR>"
 let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 """""""""""""""""""""""""""
 "syntastic
